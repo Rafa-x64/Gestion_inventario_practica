@@ -1,0 +1,11 @@
+<?php
+
+const SGBD = "mysql:host=localhost;dbname=WMS";
+
+const USUARIO = "root";
+
+const CONSTRASEÑA = "";
+
+const METHOD = "AES-256-CBC";
+
+const 
