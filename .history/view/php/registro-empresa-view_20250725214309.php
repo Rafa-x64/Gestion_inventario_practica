@@ -258,7 +258,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 bg-danger d-flex flex row align-items-center justify-content-center">
-                    <p class="text-center text-white">Error al registrar la empresa. Redirigiendo a inicio</p>
+                    <p class="text-center te">Error al registrar la empresa. Redirigiendo a inicio</p>
                 </div>
             </div>
         </div>

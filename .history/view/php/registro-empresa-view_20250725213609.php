@@ -247,18 +247,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 bg-success d-flex flex row align-items-center justify-content-center">
-                    <p class="text-center text-white">Empresa registrada correctamente. Redirigiendo al dashboard del administrador de la empresa</p>
+                    <p class="text-center">Empresa registrada correctamente. Redirigiendo al dashboar</p>
                 </div>
             </div>
         </div>
-        <meta http-equiv="refresh" content="6;url=index.php?page=dashboard-admin">
+        <meta http-equiv="refresh" content="4;url=index.php?page=inicio-sesion">
     <?php
     } else {
     ?>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 bg-danger d-flex flex row align-items-center justify-content-center">
-                    <p class="text-center text-white">Error al registrar la empresa. Redirigiendo a inicio</p>
+                    <p class="text-center">Error al registrar la empresa. Redirigiendo a inicio</p>
                 </div>
             </div>
         </div>

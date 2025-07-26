@@ -6,7 +6,9 @@ class vistaM
     protected static function obtenerVista($pagina) //recive una variable pagina
     {
         //lista de paginas del proyecto
-        $paginas_existentes = ["404", "inicio-sesion", "inicio", "registro-empresa", "dashboard-admin"]; //lista de paginas del proyecto
+        $paginas_existentes = ["404", "inicio-sesion", "inicio", "registro-empresa", "dashboard-admin"];
+
+        $paginas_existentes = ["404", "inicio-sesion", "inicio", "registro-empresa"]; //lista de paginas del proyecto
 
         if (!in_array($pagina, $paginas_existentes)) { //si no esta en el array entonces...
             return "404-view.php"; //pagina de 404

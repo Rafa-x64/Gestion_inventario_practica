@@ -7,11 +7,6 @@
         require("php/" . $vista);
         include("view/includes/scripts.php");
     } else {
-        include("view/includes/links.php");
-        require("view/includes/header.html");
-        include("php/" . $vista);
-        require("view/includes/footer.html");
-        include("view/includes/scripts.php");
     }
 
     ?>
