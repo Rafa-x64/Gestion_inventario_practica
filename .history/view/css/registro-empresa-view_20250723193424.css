@@ -1,0 +1,8 @@
+input[type="text"] {
+    width: 100%;
+}
+
+#barra-navegacion{
+    border-top-left-radius: 1rem;
+    
+}

@@ -1,0 +1,12 @@
+input[type="text"] {
+    width: 100%;
+}
+
+#barra-navegacion {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+#nombre_legal{
+    width: 100;
+}

@@ -1,0 +1,1 @@
+<h1>este es el register_shutdown_function</h1>

@@ -1,0 +1,9 @@
+<?php
+
+class mainModel{
+
+protected static function conectarBD
+
+}
+
+?>

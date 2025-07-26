@@ -1,0 +1,6 @@
+section
+<header class="barra-navegacion">
+    <div class="container-fluid">
+        <div class="row"></div>
+    </div>
+</header>

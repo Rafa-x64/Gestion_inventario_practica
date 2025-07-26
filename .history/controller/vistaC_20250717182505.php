@@ -1,0 +1,18 @@
+<?php
+require_once("./model/vistaM.php");//debe incluir el codigo del modelo
+
+class vistaC extends vistaM//extiende del modelo para usar sus metodos
+{
+
+    public function cargarVista()//funcion que carga la vista segun la url que recibe 
+    {
+        if (isset($_GET["page"])) {
+            $vista = self::obtenerVista($_GET["page"]);
+        } else {
+            $vista = "inicio-view.php";
+        }
+
+        // IMPORTANTE: define $vista como variable accesible
+        require("view/plantilla.php");
+    }
+}

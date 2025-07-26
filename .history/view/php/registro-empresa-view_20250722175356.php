@@ -1,0 +1,111 @@
+<style>
+    [class*="col"],
+    [class*="row"],
+    [class*="section"] {
+        border: 2px solid black;
+    }
+
+    [class*="container"] {
+        border: 2px solid black;
+    }
+</style>
+<div class="container-fluid">
+    <div class="row d-flex flex-column align-items-center justify-content-center">
+        <div class="col-8 align-items-center justify-content-center">
+            <div class="row">
+                <div class="col">
+                    <header id="barra-navegacion">
+                        <div class="container-fluid pt">
+                            <div class="row flex-row py-4">
+                                <div class="col-7 d-flex flex-row justify-content-start">
+                                    <i class="bi bi-bricks fs-3 ps-3 text-white">WMS</i>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+                <div class="col-11 d-flex flex-column align-items-center justify-content-center">
+                    <h1>Formulario de registro</h1>
+                    <form action="" method="post" class="form-control d-flex flex-column align-items-center justify-content-center">
+                        <div class="row d-flex flex-row align-items-center justify-content-center">
+                            <div class="col-12 d-flex flex-column align-items-center justify-content-center">
+                                <input type="text" name="" id="nombre_legal" placeholder="Nombre legal">
+                                <div class="row">
+                                    <div class="col-12">
+                                        
+                                    </div>
+                                </div>
+                                <select name="" id="">
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select><input type="text" name="" id="rif" placeholder="RIF"><input type="text" name="" id="direccion" placeholder="Direccion"><input type="text" name="" id="nombre_legal" placeholder="Nombre legal">
+                                <input:mail id="correo" placeholder="Correo electronico"></input:mail>
+                                <input type="text" name="" id="nombre_representante" placeholder="Nombre del representante"><input type="text" name="" id="fecha_registro" placeholder="Fecha de registro">
+                                <select name="" id="">
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select><input type="file" name="" id="logo"><label for="">Tipo de Empresa</label>
+                                <select name="tipo_empresa" id="">
+                                    <option value="persona_natural">Persona Natural</option>
+                                    <option value="sociedad_anonima">Sociedad Anónima (S.A.)</option>
+                                    <option value="sociedad_de_responsabilidad_limitada">Sociedad de Responsabilidad Limitada (S.R.L.)</option>
+                                    <option value="sociedad_comanditaria">Sociedad Comanditaria</option>
+                                    <option value="sociedad_civil">Sociedad Civil</option>
+                                    <option value="cooperativa">Cooperativa</option>
+                                    <option value="fundacion">Fundación</option>
+                                    <option value="comunidad_de_bienes">Comunidad de Bienes</option>
+                                    <option value="empresa_del_estado">Empresa del Estado</option>
+                                    <option value="comercial">Comercial</option>
+                                    <option value="industrial">Industrial</option>
+                                    <option value="servicios">Servicios</option>
+                                    <option value="agropecuario">Agropecuario</option>
+                                    <option value="tecnologico">Tecnológico</option>
+                                    <option value="salud">Salud</option>
+                                    <option value="educacion">Educación</option>
+                                    <option value="transporte">Transporte</option>
+                                    <option value="construccion">Construcción</option>
+                                    <option value="turismo">Turismo</option>
+                                    <option value="financiero">Financiero</option>
+                                    <option value="energia">Energía</option>
+                                    <option value="local">Local</option>
+                                    <option value="regional">Regional</option>
+                                    <option value="nacional">Nacional</option>
+                                    <option value="multinacional">Multinacional</option>
+                                    <option value="transnacional">Transnacional</option>
+                                    <option value="microempresa">Microempresa</option>
+                                    <option value="pequena">Pequeña</option>
+                                    <option value="mediana">Mediana</option>
+                                    <option value="grande">Grande</option>
+                                    <option value="privada">Privada</option>
+                                    <option value="publica">Pública</option>
+                                    <option value="mixta">Mixta</option>
+                                    <option value="primario">Primario</option>
+                                    <option value="secundario">Secundario</option>
+                                    <option value="terciario">Terciario</option>
+                                    <option value="cuaternario">Cuaternario</option>
+                                    <option value="quinario">Quinario</option>
+                                </select>
+                                <select name="" id="">Moneda
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select><select name="" id="">Zona horaria
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php
+include("./controller/registroEmpresaC.php");
+$registro = registroEmpresaC::getFormulario($_POST);
+?>
