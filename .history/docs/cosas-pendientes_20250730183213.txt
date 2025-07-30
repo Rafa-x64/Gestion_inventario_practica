@@ -8,6 +8,7 @@ importante hacer push a "test" y luego de acomodar los siguientes aspectos hacer
             * asignar el rol a la clase justo en el momento de hacer la instancia cuando se registra una empresa
 
 2._ diseñar el dashboard del admin y poner todos los datos que se almacenaron en la sesion luego de registrar (desencriptar al leerlos), el dashboard admin debe tener un diseño sobrio y profesional, ademas de diseñar cada una de las vistas requeridas por el dashboard admin (hacer las vistas para las opciones)
+
             * no guardar datos desencriptados otra vez en la sesion
             * hacer modelo para eviitar inyeccion sql
             * hacer los diseños lo mas lindos posibles
