@@ -1,0 +1,33 @@
+<style>
+    [class^="row-"] {
+        border: 2px solid red;
+    }
+
+    [class^="col-"] {
+        border: 2px solid blue;
+    }
+
+    [class^="container-"] {
+        border: 2px solid black;
+    }
+</style>
+<!-- Botón para abrir el menú -->
+<button class="btn" toggle-bs>
+    <i class="bi bi-menu-app fs-1 text-primary">Menu</i>
+</button>
+
+<!-- Menú Offcanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="menuLateralLabel">Navegación</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="list-group">
+            <li class="list-group-item"><a href="#">Inicio</a></li>
+            <li class="list-group-item"><a href="#">Productos</a></li>
+            <li class="list-group-item"><a href="#">Inventario</a></li>
+            <li class="list-group-item"><a href="#">Configuración</a></li>
+        </ul>
+    </div>
+</div>

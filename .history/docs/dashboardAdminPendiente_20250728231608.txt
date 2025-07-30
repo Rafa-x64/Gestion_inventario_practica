@@ -1,0 +1,60 @@
+🛒 Productos
+Catálogo básico para mantener la información esencial organizada.
+
+Crear producto
+
+Editar producto
+
+Eliminar producto
+
+Buscar producto
+
+🧍 Empleados (<details> desplegable)
+Sección para administrar el personal relacionado al sistema.
+
+Crear empleado
+
+Editar empleado
+
+Ver listado
+
+Eliminar empleado
+
+
+⚙️ Configuración
+Personaliza aspectos básicos del sistema.
+
+Datos de empresa
+
+Configurar impuestos
+
+Usuario y contraseña
+
+Empleados
+
+Listado General
+Ver todos los empleados (con filtros por cargo, estado, fecha de ingreso)
+
+Foto, nombre completo, cargo y estado (activo/inactivo)
+
+🔎 Búsqueda Rápida
+Buscar por nombre, cédula, o cargo
+
+✍️ Registro y Edición
+Crear nuevo empleado (datos personales, cargo, fecha de ingreso)
+
+Editar información existente (sin mostrar campos irrelevantes)
+
+Cambiar estado: activo/inactivo/despedido
+
+Estadísticas de Personal
+Total de empleados activos
+
+Porcentaje por cargo (gráfica de torta)
+
+Nuevos ingresos este mes
+
+Rotación del personal (si aplica)
+
+🔐 Roles y Permisos (si el sistema maneja accesos)
+Asignar rol: administrador, vendedor, solo lectura, etc.

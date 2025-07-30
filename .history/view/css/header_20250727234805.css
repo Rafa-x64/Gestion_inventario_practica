@@ -1,0 +1,21 @@
+/* 🎨 Estilo general del offcanvas */
+#menu-izquierdo {
+    background-color: rgba(248, 249, 250, 0.8);
+}
+
+.offcanvas-header {
+    background-color: white !important;
+}
+
+#lista-opciones-menu-izquierdo{
+    list-style: none;
+}
+
+#lista-opciones-menu-izquierdo li {
+    paddin
+}
+
+#lista-opciones-menu-izquierdo a{
+    text-decoration: none;
+    color: black;
+}

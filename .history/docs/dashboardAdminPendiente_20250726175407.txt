@@ -1,0 +1,72 @@
+📦 Inventario
+Gestión directa de todo lo que entra, sale y se mantiene en stock.
+
+Ver productos en stock
+
+Registrar entradas
+
+Registrar salidas
+
+Historial de movimientos
+
+Alerta de bajo inventario
+
+🛒 Productos
+Catálogo básico para mantener la información esencial organizada.
+
+Crear producto
+
+Editar producto
+
+Eliminar producto
+
+Buscar producto
+
+🧍 Empleados (<details> desplegable)
+Sección para administrar el personal relacionado al sistema.
+
+Crear empleado
+
+Editar empleado
+
+Ver listado
+
+Eliminar empleado
+
+🧾 Ventas
+Control de lo que sale hacia el cliente.
+
+Registrar venta
+
+Historial de ventas
+
+Ver productos vendidos
+
+📥 Compras
+Registro de entradas por adquisiciones externas.
+
+Registrar compra
+
+Historial de compras
+
+Proveedores frecuentes
+
+📊 Reportes
+Información clave para la toma de decisiones.
+
+Reporte de inventario
+
+Reporte de ventas
+
+Reporte de compras
+
+⚙️ Configuración
+Personaliza aspectos básicos del sistema.
+
+Datos de empresa
+
+Configurar impuestos
+
+Usuario y contraseña
+
+E

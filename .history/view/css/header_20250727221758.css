@@ -1,0 +1,51 @@
+#menu-izquierdo {
+    background-color: #f8f9fa !important;
+}
+/* 🎨 Estilo general del offcanvas */
+#menu-izquierdo {
+    background-color: #f8f9fa;
+    /* Color claro, pero puedes probar con #343a40 para oscuro */
+    width: 280px;
+    /* Ajusta según el diseño responsivo */
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    /* Sombra lateral suave */
+}
+
+/* 🔠 Encabezado con mejor distribución */
+.offcanvas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* 🧾 Título */
+.offcanvas-title h3 {
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 600;
+    color: #343a40;
+}
+
+/* 🔘 Botón para cerrar */
+.btn.text-reset {
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 1.2rem;
+    color: #dc3545;
+    /* Rojo Bootstrap, editable */
+    transition: color 0.3s ease;
+}
+
+.btn.text-reset:hover {
+    color: #a71d2a;
+}
+
+/* 📌 Icono caret */
+.bi-caret-left-fill {
+    font-size: 1.2rem;
+    margin-left: 6px;
+}

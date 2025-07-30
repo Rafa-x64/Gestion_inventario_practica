@@ -1,0 +1,5 @@
+1._ asignar roles a cada tipo de empleados
+
+        al registrar una empresa se le debera agregar el atributo $rol = "super-administrador", el cual puede manipular todas las caracteristicas del sistema (como esta en el dashboard admin). al registrar un empleado este tambien debe tener un rol ya sea administrador-comun o vendedor
+
+            

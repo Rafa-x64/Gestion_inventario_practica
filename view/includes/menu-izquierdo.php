@@ -1,0 +1,13 @@
+<style>
+    [class^="row"] {
+        border: 2px solid red;
+    }
+
+    [class^="col"] {
+        border: 2px solid blue;
+    }
+
+    [class^="container"] {
+        border: 2px solid black;
+    }
+</style>

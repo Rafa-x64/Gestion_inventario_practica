@@ -1,0 +1,110 @@
+<style>
+    [class^="row"] {
+        border: 2px solid red;
+    }
+
+    [class^="col"] {
+        border: 2px solid blue;
+    }
+
+    [class^="container"] {
+        border: 2px solid black;
+    }
+</style>
+
+<header class="container-fluid" class="" id="menu-superior">
+    <div class="row bg-primary">
+        <!--parte izquierda del menu-superior-->
+        <div class="col-3 col-md-2 col-lg-1 d-flex flex-column justify-content-center align-items-center">
+            <button class="btn border-white rounded" data-bs-toggle="offcanvas" data-bs-target="#menu-izquierdo">
+                <i
+                    class="bi bi-caret-right-fill fs-sm-6 fs-md-4 fs-lg-1 text-white d-flex flex-row justify-content-center align-items-center">Menu</i>
+            </button>
+            <!--aqui va el offcanva-->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="menu-izquierdo">
+                <!--encaezado del offcanvas-->
+                <div class="offcanvas-header">
+                    <!--titulo del offcanva-->
+                    <div class="offcanvas-title">
+                        <h3>Menu Administrador</h3>
+                        <!--boton que cierra el offcanva-->
+                        <button class="btn border-primary rounded" data-bs-dismiss="offcanvas">
+                            <i class="bi bi-caret-left-fill fs-6 text-primary">Cerrar</i>
+                        </button>
+                    </div>
+                </div>
+                <!--cuerpo del offcanva-->
+                <div class="offcanvas-body">
+                    <div class="row">
+                        <div class="col-9 ps-lg-4 py-2 my-2 rounded">
+                            <!-- Sección: Productos -->
+                            <details title="Gestión directa de todo lo que entra, sale y se mantiene en stock.">
+                                <summary class="pb-3">productos</summary>
+                                <ul id="lista-opciones-menu-izquierdo">
+                                    <li class="pt-2">
+                                        <div class="row d-flex flex-row">
+                                            <div class="col-1 px-0">
+                                                <i class="bi bi-plus text-primary "></i>
+                                            </div>
+                                            <div class="col-11 px-0">
+                                                <a href="">Ver productos en stock</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="pt-2"><a href="">Registrar entradas</a></li>
+                                    <li class="pt-2"><a href="">Historial de movimientos</a></li>
+                                    <li class="pt-2"><a href="">Alerta de bajo inventario</a></li>
+                                </ul>
+                            </details>
+
+                            <!-- Sección: Ventas -->
+                            <details>
+                                <summary class="pb-3">ventas</summary>
+                            </details>
+
+                            <!-- Sección: Compras -->
+                            <details>
+                                <summary class="pb-3">compras</summary>
+                            </details>
+
+                            <!-- Sección: Reportes -->
+                            <details>
+                                <summary class="pb-3">reportes</summary>
+                            </details>
+
+                            <!-- Sección: Empleados -->
+                            <details>
+                                <summary class="pb-3">Empleados</summary>
+                            </details>
+
+                            <!-- Sección: Búsqueda Rápida -->
+                            <details>
+                                <summary class="pb-3">busqueda rapida</summary>
+                            </details>
+
+                            <!-- Sección: Configuración -->
+                            <details>
+                                <summary class="pb-3">configuracion</summary>
+                            </details>
+
+                            <!-- Sección: Salir -->
+                            <details>
+                                <summary class="pb-3">salir</summary>
+                            </details>
+
+                            <!-- Sección: Ayuda -->
+                            <details>
+                                <summary class="pb-3">ayuda</summary>
+                            </details>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--parte derecha del menu-->
+        <div class="col-9 col-md-10 col-lg-11">
+            <!--aqui va el contenido-->
+        </div>
+    </div>
+</header>

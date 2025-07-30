@@ -1,0 +1,17 @@
+/* 🎨 Estilo general del offcanvas */
+#menu-izquierdo {
+    background-color: rgba(248, 249, 250, 0.8);
+}
+
+.offcanvas-header {
+    background-color: white !important;
+}
+
+#centro-menu-izquierdo{
+    border-color: grey;
+    background-color: rgba(248, 249, 250, 0.8);
+}
+
+#summary-menu-izquierdo{
+
+}

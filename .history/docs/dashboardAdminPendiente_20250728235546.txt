@@ -1,0 +1,3 @@
+
+🔐 Roles y Permisos (si el sistema maneja accesos)
+Asignar rol: administrador, vendedor, solo lectura, etc.

@@ -1,0 +1,11 @@
+1._ asignar roles a cada tipo de empleados
+
+        al registrar una empresa se le debera agregar el atributo $rol = "super-administrador", el cual puede manipular todas las caracteristicas del sistema (como esta en el dashboard admin). al registrar un empleado este tambien debe tener un rol ya sea administrador-comun o vendedor
+
+            * modificar la tabla empresa
+            * asignar el rol a la clase justo en el momento de hacer la instancia cuando se registra una empresa
+
+2._ diseñar el dashboard del admin y poner todos los datos que se almacenaron en la sesion luego de registrar (desencriptar al leerlos), el dashboard admin debe tener un diseño sobrio y profesional, ademas de diseñar cada una de las vistas requeridas por el dashboard admin (hacer las vistas para las opciones)
+
+            * no guardar datos desencriptados otra vez en la sesion
+            * hacer modelo para eviitar inyeccion

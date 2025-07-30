@@ -1,0 +1,59 @@
+Productos
+Registrar nuevo producto
+
+Editar información del producto
+
+Eliminar producto
+
+Consultar inventario actual
+
+Búsqueda avanzada (por nombre, categoría, proveedor, código)
+
+📤 Entradas y Salidas
+Registrar entrada por compra, producción o devolución
+
+Registrar salida por venta, merma o traslado
+
+Historial de movimientos
+
+Alertas por bajo stock
+
+🏷 Categorías y Subcategorías
+Crear, editar y eliminar categorías
+
+Asignar productos por categoría
+
+📍 Ubicación de Almacenes
+Crear ubicaciones de almacenamiento (almacén, estantería, zona, etc.)
+
+Asignar productos a ubicación
+
+Visualizar distribución por zona
+
+🔁 Transferencias Internas
+Traslado entre almacenes
+
+Historial de transferencias
+
+⏱ Control de Stock
+Inventario físico (toma de inventario)
+
+Conciliación entre stock físico y sistema
+
+Reportes de discrepancias
+
+📄 Informes y Auditoría
+Informe de stock por fecha o categoría
+
+Histórico de entradas y salidas
+
+Informe de productos con alto/medio/bajo rotación
+
+Exportar en PDF/Excel
+
+🧪 Lotes y Fechas de Caducidad (si aplica)
+Gestión de lotes
+
+Control de vencimientos
+
+Alertas tempranas de expiración
