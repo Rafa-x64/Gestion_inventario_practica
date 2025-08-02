@@ -1,0 +1,55 @@
+<?php
+
+include_once("./model/mainModel.php");
+include_once("./model/seguridadM.php");
+
+class inicioSesionC extends mainModel
+{
+    //---------------------obtener formulario desde la vista
+    public static function obtener_formulario($formulario): array
+    {
+        if (!is_array($formulario)) {
+            throw new InvalidArgumentException("el parametro debe ser un array asociativo");
+        }
+
+        self::validar_usuario($formulario['nombre_legal'], $formulario['usuario'], $formulario['contraseña']);
+
+        return $formulario;
+    }
+
+    //---------------------validar un usuario ingresado en la vista-------------------------
+    public static function validar_usuario($nombre_legal, $usuario, $contraseña): bool
+    {
+        if (!is_string($nombre_legal) || !is_string($usuario) || !is_string($contraseña)) {
+            throw new InvalidArgumentException("los parametros deben ser strings");
+            return false;
+        }
+
+        try {
+
+            $con = self::conectar_base_datos();
+            $obtener = $con->prepare("SELECT * FROM empresas WHERE nombre_legal = ? AND usuario_admin = ?");
+            $obtener->execute([$nombre_legal, $usuario]);
+            $datos_empleado = $obtener->fetchAll(PDO::FETCH_ASSOC);
+
+            if (seguridadM::verificar_contraseña($contraseña, $datos_empleado["contraseña_admin"]) == false) {
+                return false; //contraseña incorrecta
+            }
+
+            self::guardar_sesion($datos_empleado);
+            return true; //contraseña correcta
+
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            return false; //error
+        }
+    }
+
+    private static function guardar_sesion($datos_empleado) {
+        foreach($datos_empleado as $key => $value){
+            $dato = seguridadM::encriptar_dato($value);
+            $_
+        }
+        return true;
+    }
+}

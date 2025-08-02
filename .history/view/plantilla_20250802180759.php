@@ -1,0 +1,13 @@
+    <?php
+
+    //aqui se ejecuta la vista y se muestran los includes si la pagina cumple cierta condicion
+
+    session_start();
+
+    if($vista == "404"){}
+    include("view/includes/links.php");
+    include("php/" . $vista);
+    require("view/includes/footer.html");
+    include("view/includes/scripts.php");
+
+    ?>
