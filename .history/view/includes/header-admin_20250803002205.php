@@ -333,11 +333,10 @@
     </div>
 </header>
 
-<!--salir cerrando la sesion (asegurarse de tener un fomulario para poder activarlo)-->
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cerrar_sesion'])) {
     require_once './controller/logout/cerrarSesion.php';
     cerrarSesion::cerrar_sesion();
-    echo '<meta http-equiv="refresh" content="0;url=index.php?page=inicio">';
+    echo <meta http-equiv="refresh" content="4;url=index.php?page=dashboard-admin">
 }
 ?>

@@ -333,7 +333,6 @@
     </div>
 </header>
 
-<!--salir cerrando la sesion (asegurarse de tener un fomulario para poder activarlo)-->
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cerrar_sesion'])) {
     require_once './controller/logout/cerrarSesion.php';

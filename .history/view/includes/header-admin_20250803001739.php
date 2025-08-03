@@ -313,11 +313,10 @@
         <div class="col-9 col-md-10 col-lg-11">
             <div class="row d-flex flex-row justify-content-end align-items-center">
                 <div class="col-1 text-center">
-                    <form action="" method="post">
-                        <input type="hidden" name="cerrar_sesion" value="cerrar_sesion">
-                        <button type="submit" class="btn">
-                            <i class="bi bi-box-arrow-left text-white fs-sm-6 fs-md-4 fs-lg-1"></i>
-                        </button>
+                    <form method="post">
+                        <a href="index.php?page=inicio" class="btn">
+                            
+                        </a>
                     </form>
                 </div>
                 <div class="col-1 text-center">
@@ -333,11 +332,10 @@
     </div>
 </header>
 
-<!--salir cerrando la sesion (asegurarse de tener un fomulario para poder activarlo)-->
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cerrar_sesion'])) {
     require_once './controller/logout/cerrarSesion.php';
     cerrarSesion::cerrar_sesion();
-    echo '<meta http-equiv="refresh" content="0;url=index.php?page=inicio">';
+    header('Location: index.php?page=inicio');
 }
 ?>
