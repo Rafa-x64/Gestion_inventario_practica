@@ -32,6 +32,7 @@
                 require("view/includes/header-empleado-vendedor.php");
                 break;
             default:
+                // Opcional: header genérico o sin header
                 break;
         }
 

@@ -21,6 +21,7 @@
     if (in_array($vista, $vistas_sin_header)) {
         include("php/" . $vista);
     } else {
+        // Header según rol
         switch ($rol) {
             case "super administrador":
                 require("view/includes/header-admin.php");
@@ -32,6 +33,7 @@
                 require("view/includes/header-empleado-vendedor.php");
                 break;
             default:
+                // Opcional: header genérico o sin header
                 break;
         }
 
