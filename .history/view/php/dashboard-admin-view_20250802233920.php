@@ -12,5 +12,6 @@ en la bd si es hasheado(crear metodo para deshashear en el inicio de seison de u
 
 <?php
 echo "<br>" . "datos desencriptados de la sesion" . "<br>";
+echo dashboardAdminC::obtener_ruta_logo($);
 print_r(dashboardAdminC::desencriptar_sesion());
 ?>

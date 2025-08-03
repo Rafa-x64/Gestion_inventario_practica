@@ -12,4 +12,6 @@ class dashboardAdminC extends mainModel
         $datos = seguridadM::desencriptar_varios_datos($_SESSION);
         return $datos;
     }
+
+    public function desenciptar
 }

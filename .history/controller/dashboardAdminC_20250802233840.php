@@ -12,4 +12,9 @@ class dashboardAdminC extends mainModel
         $datos = seguridadM::desencriptar_varios_datos($_SESSION);
         return $datos;
     }
+
+    public function obtener_ruta_logo($ruta_logo)
+    {
+        return seguridadM::desencriptar_dato($ruta_logo);
+    }
 }
