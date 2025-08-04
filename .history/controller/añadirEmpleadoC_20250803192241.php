@@ -1,0 +1,9 @@
+<?php
+
+include
+
+class añadirEmpleadoC{
+
+}
+
+?>

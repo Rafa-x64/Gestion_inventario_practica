@@ -1,12 +1,43 @@
 <?php
 
-include_once("./model/mainModel.php");
+include_once("./config/server.php");
 
-class seguridadM extends mainModel
+class mainModel
 {
 
+    //--------------------conexion a la base de datos-------------------------
+    protected static function conectar_base_datos()
+    {
+        try {
+            $con = new PDO(SGBD, USUARIO, CONSTRASEÑA, [
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8' COLLATE 'utf8_spanish_ci'"
+            ]);
+            return $con;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //--------------------hacer una consulta simple-------------------------
+    protected static function consulta($sentenciaSQL)
+    {
+        $operacion = self::conectar_base_datos()->prepare($sentenciaSQL);
+        $operacion->execute();
+        return $operacion;
+    }
+
+    //------------------desencriptar la matriz sesion---------------------
+    protected static function desencriptar_sesion()
+    {
+        //desencriptar datos de la sesion en el controlador del dashboard para poder mostrar los datos del usuario
+        $datos = self::desencriptar_varios_datos($_SESSION);
+        return $datos;
+    }
+
     //----------------hashear una contraseña------------------------
-    public static function hashear_contraseña($contraseña): string
+    protected static function hashear_contraseña($contraseña): string
     {
         if (!is_string($contraseña)) {
             throw new InvalidArgumentException("el parametro debe ser un string");
@@ -19,7 +50,7 @@ class seguridadM extends mainModel
     }
 
     //pendiente por hacer al hacer el login
-    public static function verificar_contraseña($contraseña, $contraseña_hasheada): bool
+    protected static function verificar_contraseña($contraseña, $contraseña_hasheada): bool
     {
         if (!is_string($contraseña)) {
             throw new InvalidArgumentException("el parametro debe ser un string");
@@ -33,7 +64,7 @@ class seguridadM extends mainModel
     }
 
     //----------------encriptar varios datos------------------------
-    public static function encriptar_varios_datos($datos): array
+    protected static function encriptar_varios_datos($datos): array
     {
         if (!is_array($datos)) {
             throw new InvalidArgumentException("el parametro debe ser un array asociativo");
@@ -50,7 +81,7 @@ class seguridadM extends mainModel
     }
 
     //----------------desencriptar varios datos------------------------
-    public static function desencriptar_varios_datos($datos): array
+    protected static function desencriptar_varios_datos($datos): array
     {
         if (!is_array($datos)) {
             throw new InvalidArgumentException("el parametro debe ser un array asociativo");
@@ -67,7 +98,7 @@ class seguridadM extends mainModel
     }
 
     //----------------encriptar un dato------------------------
-    public static function encriptar_dato($dato)
+    protected static function encriptar_dato($dato)
     {
         if (!is_string($dato)) {
             throw new InvalidArgumentException("el parametro debe ser un string");
@@ -77,7 +108,7 @@ class seguridadM extends mainModel
     }
 
     //----------------desencriptar un dato------------------------
-    public static function desencriptar_dato($dato)
+    protect static function desencriptar_dato($dato)
     {
         if (!is_string($dato)) {
             throw new InvalidArgumentException("el parametro debe ser un string");

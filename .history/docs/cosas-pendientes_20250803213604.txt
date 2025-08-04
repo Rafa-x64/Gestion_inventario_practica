@@ -1,0 +1,8 @@
+6._acomodar los campos de inicio de sesion para empleados y empresas
+
+    * campo de empresa para la que trabaja
+    * campo de usuario
+    * campo contraseña
+
+    validar cual es su cargo dependiendo de la empresa donde trabaja, su correo y validar si la contraseña ingresada es valida, si no existen usuario ni contraseña con el nombre de esa empresa asociado, entoces denegar el ingreso a dicho dashboard segun su cargo
+            

@@ -1,0 +1,94 @@
+1._acomodar los campos de inicio de sesion para empleados y empresas
+
+    * campo de empresa para la que trabaja
+    * campo de usuario
+    * campo contraseña
+
+    validar cual es su cargo dependiendo de la empresa donde trabaja, su correo y validar si la contraseña ingresada es valida, si no existen usuario ni contraseña con el nombre de esa empresa asociado, entoces denegar el ingreso a dicho dashboard segun su cargo
+
+2._hacer el formulario para registrar un empleado
+
+    👤 Información Personal
+        Nombre completo
+
+        Cédula o documento de identidad
+
+        Fecha de nacimiento
+
+        Sexo
+
+        Estado civil
+
+        Dirección de residencia
+
+        Teléfono y correo electrónico
+
+    💼 Información Laboral
+        Cargo (vendedor, administrador, etc.)
+
+        Departamento o área
+
+        Fecha de ingreso
+
+        Tipo de contrato (fijo, temporal, freelance)
+
+        Horario de trabajo
+
+        Supervisor directo
+
+        Estado del empleado (activo, suspendido, retirado)
+
+    💲 Información Salarial y Beneficios
+        Salario base
+
+        Bonificaciones o comisiones (ideal para vendedores)
+
+        Deducciones aplicables
+
+        Tipo de pago (quincenal, mensual)
+
+        Banco y número de cuenta
+
+        Beneficios adicionales (cesta tickets, seguros, transporte, etc.)
+
+    📊 Métricas y Rendimiento (especialmente útil para vendedores)
+        Cuotas asignadas vs. cuotas alcanzadas
+
+        Clientes atendidos
+
+        Índice de satisfacción del cliente
+
+        Historial de ventas
+
+        Ranking interno
+
+    🔐 Accesos y Credenciales
+        Usuario y contraseña del sistema (si aplica)
+
+        Nivel de acceso (solo lectura, edición, administrador)
+
+        Historial de actividad en sistema
+
+    📎 Documentación Adjunta
+        CV o hoja de vida
+
+        Copia de cédula
+
+        Contrato firmado
+
+        Certificados o títulos académicos
+
+        Constancias laborales previas
+
+    🧠 Campo para Notas o Evaluaciones
+        Comentarios de supervisores
+
+        Evaluaciones de desempeño
+
+        Observaciones personales importantes
+
+3._al hacer
+
+4._hacer la tabla empleado
+
+    cada empleado esta asociado a una empreas asi que este debera tener como llave foranea el nombre legal de la empresa y la empresa debera tener asignado el nombre y id del usuario
