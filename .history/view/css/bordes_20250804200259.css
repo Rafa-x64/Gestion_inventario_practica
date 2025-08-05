@@ -1,0 +1,12 @@
+
+
+/*----------comentar para ocultar los bordes visibles--------------*/
+/*[class*="col"],
+[class*="row"],
+[class*="section"] {
+    border: 2px solid black;
+}
+
+[class*="container"] {
+    border: 2px solid black;
+}*/

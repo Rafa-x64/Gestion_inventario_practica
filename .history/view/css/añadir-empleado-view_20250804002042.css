@@ -1,0 +1,5 @@
+input[type="text"] {}
+
+section[class="row"]{
+    border-top: 1px solid #000;
+}

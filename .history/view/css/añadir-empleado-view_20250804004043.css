@@ -1,0 +1,10 @@
+input[type="text"] {}
+
+#informacion_personal{
+    border-bottom: 2px solid #d9d7d7;
+}
+
+#informacion_personal,
+#informacion_laboral {
+    border-bottom: 2px solid #d9d7d7;
+}
