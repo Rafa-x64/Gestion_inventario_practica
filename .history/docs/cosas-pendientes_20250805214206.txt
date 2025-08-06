@@ -1,0 +1,15 @@
+1
+
+    validar cual es su cargo dependiendo de la empresa donde trabaja, su correo y validar si la contraseña ingresada es valida, si no existen usuario ni contraseña con el nombre de esa empresa asociado, entoces denegar el ingreso a dicho dashboard segun su cargo
+
+3._hacer la tabla empleado
+
+    cada empleado esta asociado a una empreas asi que este debera tener como llave foranea el nombre legal de la empresa y la empresa debera tener asignado el nombre y id del usuario
+
+4._al modificar el inicio de sesion para un empleado
+
+    verificar si en la tabla empleado hay un nombre legal (de su empresa asociada) que coincida con la ingresada en el login
+
+    redirigir a un dashboard u otro segun el rol que se ingreso en le formulario de inicio de sesion
+
+5._verificar si se incluye el header correcto segun el rol
