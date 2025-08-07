@@ -1,0 +1,10 @@
+#informacion_personal,
+#informacion_laboral,
+#metrica_salarial,
+#accesos_credenciales {
+    border-top: 2px solid #d9d7d7;
+}
+
+@media(max-width: 425px){
+    #registro_empleado p, #registro_empleado 
+}
