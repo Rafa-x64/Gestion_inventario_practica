@@ -29,7 +29,7 @@ include("./controller/crudEmpleadoC.php");
             </div>
         </div>
         <div class="col-sm-11 col-lg-8 d-flex flex-column justify-content-center align-items-center pe-0">
-            <form action="" method="post" class="form-control d-flex flex-column align-items-start justify-content-center py-4 px-sm-1 px-md-4 px-lg-4 mb-5" id="registro_empleado">
+            <form action="" method="post" class="form-control d-flex flex-column align-items-start justify-content-center py-4 px-sm-1 px-lg-4git mb-5" id="registro_empleado">
                 <div class="row">
                     <div class="col-12 pb-3">
                         <small class="form-text text-muted d-flex flex-row">"Las casillas marcadas con <p class="text-danger px-1" id="bull">" &bull; "</p> son campos obligatorios".</small>

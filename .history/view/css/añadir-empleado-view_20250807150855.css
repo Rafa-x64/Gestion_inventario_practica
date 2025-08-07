@@ -11,11 +11,7 @@
 
 @media(max-width: 425px) {
 
-    #registro_empleado label {
-        height: 43px;
-        font-size: 0.7rem !important;
-    }
-
+    #registro_empleado label,
     #registro_empleado input,
     #registro_empleado select,
     #registro_empleado textarea,
@@ -32,23 +28,18 @@
         font-size: 1rem !important;
     }
 
-    #punto-rojo {
-        padding: 0;
-        margin: 0;
-        height: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 10px;
-    }
+        #punto-rojo {
+            padding: 0;
+            margin: 0;
+            height: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: px;
+        }
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
-
-    #registro_empleado label {
-        height: auto;
-        font-size: 0.7rem !important;
-    }
 
     #registro_empleado p,
     #registro_empleado label,
@@ -62,15 +53,5 @@
 
     #registro_empleado h5 {
         font-size: 1.15rem !important;
-    }
-
-    #punto-rojo {
-        padding: 0;
-        margin: 0;
-        height: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 5px;
     }
 }

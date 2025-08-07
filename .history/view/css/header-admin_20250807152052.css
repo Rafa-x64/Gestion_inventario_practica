@@ -1,7 +1,6 @@
 /* 🎨 Estilo general del offcanvas */
 #menu-izquierdo {
     background-color: rgba(248, 249, 250, 0.8);
-    transition: width 0.3s ease;
 }
 
 .offcanvas-header {
@@ -22,20 +21,21 @@
     color: black;
 }
 
-@media (max-width: 425px) {
+@media (min-width: 425px) {
     #menu-izquierdo {
-        width: 220px !important;
+        width: 220px;
     }
 }
 
-@media (min-width: 426px) and (max-width:1023px) {
-    #menu-izquierdo {
-        width: 300px !important;
+@media (min-width: 426px) and (max-width:768px) {
+    .offcanvas-responsive {
+        width: 300px;
     }
 }
 
-@media (min-width: 1024px) {
-    #menu-izquierdo {
-        width: 380px !important;
+@media (min-width: 992px) {
+    .offcanvas-responsive {
+        width: 500px;
+        /* Pantallas grandes */
     }
 }

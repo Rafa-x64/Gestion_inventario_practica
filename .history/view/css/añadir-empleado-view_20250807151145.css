@@ -12,7 +12,7 @@
 @media(max-width: 425px) {
 
     #registro_empleado label {
-        height: 43px;
+        height: 45px;
         font-size: 0.7rem !important;
     }
 
@@ -39,7 +39,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 10px;
+        padding-top: 25px;
     }
 }
 

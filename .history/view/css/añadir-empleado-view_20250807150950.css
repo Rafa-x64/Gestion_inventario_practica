@@ -11,9 +11,8 @@
 
 @media(max-width: 425px) {
 
-    #registro_empleado label {
-        height: 43px;
-        font-size: 0.7rem !important;
+    #registro_empleado label{
+        height: 45px ;
     }
 
     #registro_empleado input,
@@ -39,16 +38,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 10px;
+        padding-top: 25px;
     }
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
-
-    #registro_empleado label {
-        height: auto;
-        font-size: 0.7rem !important;
-    }
 
     #registro_empleado p,
     #registro_empleado label,
