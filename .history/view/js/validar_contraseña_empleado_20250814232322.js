@@ -1,0 +1,1 @@
+let contraseña1 = document.getElementById
