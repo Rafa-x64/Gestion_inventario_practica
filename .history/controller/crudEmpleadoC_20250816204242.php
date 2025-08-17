@@ -408,7 +408,7 @@ class crudEmpleadoC extends mainModel
         return $bonificaciones; // Devolver la cadena de bonificaciones sanitizada
     }
 
-    public static function sanitizarMotivoBonificaciones($motivoBonificacion)
+    public static function sanitizarMotivoBonificaciones($motivoBonificacion) //agregar a bd
     {
         if (!is_string($motivoBonificacion)) {
             throw new InvalidArgumentException("El motivo de la bonificación debe ser una cadena de texto");
@@ -443,7 +443,7 @@ class crudEmpleadoC extends mainModel
         return $tipoDeduccion;
     }
 
-    private static function sanitizarMontoDeduccion($monto)
+    private static function sanitizarMontoDeduccion($monto) //agregar a bd
     {
         if (!is_numeric($monto)) {
             throw new InvalidArgumentException("El monto de la deducción debe ser un número válido");
@@ -525,7 +525,7 @@ class crudEmpleadoC extends mainModel
         return $numeroCuenta;
     }
 
-    private static function sanitizarBeneficiosAdicionales($beneficios)
+    private static function sanitizarBeneficiosAdicionales($beneficios) //agregar a bd
     {
         $beneficiosValidos = [
             "ninguno",
@@ -605,7 +605,7 @@ class crudEmpleadoC extends mainModel
         return $id;
     }
 
-    public static function sanitizarIDEmpresa($id)
+    public static function sanitizarIDEmpresa($id) //agregar a bd
     {
         if (!is_string($id)) {
             throw new InvalidArgumentException("El ID de la empresa debe ser una cadena de texto");

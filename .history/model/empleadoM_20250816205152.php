@@ -98,7 +98,7 @@ class empleadoM extends mainModel
         try {
             $con = parent::conectar_base_datos();
 
-            $sql = "INSERT INTO empleados (
+            $sql = "INSERT INTO empleado (
             id_empleado, id_empresa, nombre, cedula, fecha_nacimiento, sexo, telefono, estado_civil,
             correo, direccion, ROL, fecha_registro, tipo_contrato, hora_entrada, hora_salida,
             estado, salario, bonificaciones, motivo_bonificacion, tipo_deduccion, monto_deduccion,

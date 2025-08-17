@@ -93,22 +93,20 @@ class empleadoM extends mainModel
         $this->id_empresa = $id_empresa;
     }
 
-    public function crearEmpleado(): bool
-    {
-        try {
+    public function crearEmpleado(): bool {
+        try{
             $con = parent::conectar_base_datos();
 
-            $sql = "INSERT INTO empleados (
-            id_empleado, id_empresa, nombre, cedula, fecha_nacimiento, sexo, telefono, estado_civil,
+            $sql = "INSERT INTO empleado (
+            id_empresa, nombre, cedula, fecha_nacimiento, sexo, telefono, estado_civil,
             correo, direccion, ROL, fecha_registro, tipo_contrato, hora_entrada, hora_salida,
             estado, salario, bonificaciones, motivo_bonificacion, tipo_deduccion, monto_deduccion,
             tipo_pago, banco, numero_cuenta, beneficios_adicionales, usuario, contraseña
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
             $stmt = $con->prepare($sql);
 
             $stmt->execute([
-                $this->id,           // ← ID generado previamente
                 $this->id_empresa,
                 $this->nombre,
                 $this->cedula,
@@ -134,10 +132,11 @@ class empleadoM extends mainModel
                 $this->numero_cuenta,
                 $this->beneficios,
                 $this->usuario,
-                $this->contraseña // ← ¡Recuerda usar password_hash()!
+                $this->contraseña
             ]);
-        } catch (PDOException $e) {
-            echo "Error al crear empleado: " . $e->getMessage();
+
+        }catch(PDOException $e){
+            $e->getMessage();
             return false;
         }
 

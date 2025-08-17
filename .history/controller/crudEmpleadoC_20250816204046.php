@@ -68,18 +68,19 @@ class crudEmpleadoC extends mainModel
         $usuario = self::sanitizarUsuario($form["empleado_usuario"]);
         //sanitizar contraseñas
         $contraseña = self::sanitizarContraseña($form["empleado_contraseña"]);
+        $contraseña2 = self::sanitizarContraseña($form["empleado_contraseña2"]);//no se ni para que la obtengo (acomodar mañana)
         //sanitizar id empresa
         $idEmpresa = self::sanitizarIDEmpresa($form["id_empresa"]);
 
         $empleado = new empleadoM($id, $nombre, $cedula, $fechaNacimiento, $sexo, $telefono, $estadoCivil, $correo, $direccion, $rol, $fechaRegistro, $tipoContrato, $supervisor, $horaEntrada, $horaSalida, $estado, $salario, $bonificaciones, $motivoBonificacion, $tipoDeduccion, $montoDeduccion, $tipoPago, $banco, $numeroCuenta, $beneficiosAdicionales, $usuario, $contraseña, $idEmpresa);
         echo $empleado->__toString();
-
-        if ($empleado->crearEmpleado() == false) {
+        
+        if($empleado->crearEmpleado() == false){
             return false;
         }
 
         return true;
-        //return $form;//no retornar formulario, hacer metodo de registro en el modelo del empleado y ejecutarlo desde aqui (en caso de dar error acomodar los campos de la base de datos DATE, TIME a VARCHAR(255))
+        
     }
 
     //-----------obtener cosas de la sesion o de cookies del servidor--------------
@@ -408,7 +409,7 @@ class crudEmpleadoC extends mainModel
         return $bonificaciones; // Devolver la cadena de bonificaciones sanitizada
     }
 
-    public static function sanitizarMotivoBonificaciones($motivoBonificacion)
+    public static function sanitizarMotivoBonificaciones($motivoBonificacion) //agregar a bd
     {
         if (!is_string($motivoBonificacion)) {
             throw new InvalidArgumentException("El motivo de la bonificación debe ser una cadena de texto");
@@ -443,7 +444,7 @@ class crudEmpleadoC extends mainModel
         return $tipoDeduccion;
     }
 
-    private static function sanitizarMontoDeduccion($monto)
+    private static function sanitizarMontoDeduccion($monto) //agregar a bd
     {
         if (!is_numeric($monto)) {
             throw new InvalidArgumentException("El monto de la deducción debe ser un número válido");
@@ -525,7 +526,7 @@ class crudEmpleadoC extends mainModel
         return $numeroCuenta;
     }
 
-    private static function sanitizarBeneficiosAdicionales($beneficios)
+    private static function sanitizarBeneficiosAdicionales($beneficios)//agregar a bd
     {
         $beneficiosValidos = [
             "ninguno",
@@ -586,7 +587,16 @@ class crudEmpleadoC extends mainModel
             throw new InvalidArgumentException("La contraseña debe tener al menos 8 caracteres, incluyendo letras y números");
         }
 
-        return parent::hashear_contraseña($contraseña);
+        return $contraseña;
+    }
+
+    public static function validarCoincidenciaContraseñas($contraseña1, $contraseña2)
+    {
+        if ($contraseña1 !== $contraseña2) {
+            throw new InvalidArgumentException("Las contraseñas no coinciden");
+        }
+
+        return true;
     }
 
     public static function sanitizarIDEmpleado($id)
@@ -605,7 +615,7 @@ class crudEmpleadoC extends mainModel
         return $id;
     }
 
-    public static function sanitizarIDEmpresa($id)
+    public static function sanitizarIDEmpresa($id)//agregar a bd
     {
         if (!is_string($id)) {
             throw new InvalidArgumentException("El ID de la empresa debe ser una cadena de texto");

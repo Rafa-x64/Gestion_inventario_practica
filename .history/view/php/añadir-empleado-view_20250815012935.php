@@ -475,35 +475,13 @@ include("./controller/crudEmpleadoC.php");
 </div>
 
 <?php
-
+AISaisiA<H
 /*echo "<br>" . "datos desencriptados de la sesion" . "<br>";
 print_r(crudEmpleadoC::desencriptar_sesion());
 echo "<br>" . "<br>";*/
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if (crudEmpleadoC::obtener_formulario($_POST) == true) {
-?>
-        <div class="container-fluid">
-            <div class="row d-flex flex-row align-items-center justify-content-center">
-                <div class="col-10 bg-success d-flex flex row align-items-center justify-content-center">
-                    <p class="text-center text-white">Empleado registrado correctamente. Redirigiendo al dashboard</p>
-                </div>
-            </div>
-        </div>
-        <meta http-equiv="refresh" content="6;url=index.php?page=dashboard-admin">
-    <?php
-    } else {
-    ?>
-        <div class="container-fluid">
-            <div class="row d-flex flex-row align-items-center justify-content-center">
-                <div class="col-10 bg-danger d-flex flex row align-items-center justify-content-center">
-                    <p class="text-center text-white">Error al registrar el empleado. Redirigiendo al dashboard</p>
-                </div>
-            </div>
-        </div>
-        <meta http-equiv="refresh" content="6;url=index.php?page=dashboard-admin">
-<?php
-    }
+    crudEmpleadoC::obtener_formulario($_POST);
 }
 ?>
 

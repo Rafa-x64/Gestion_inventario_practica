@@ -73,8 +73,8 @@ class crudEmpleadoC extends mainModel
 
         $empleado = new empleadoM($id, $nombre, $cedula, $fechaNacimiento, $sexo, $telefono, $estadoCivil, $correo, $direccion, $rol, $fechaRegistro, $tipoContrato, $supervisor, $horaEntrada, $horaSalida, $estado, $salario, $bonificaciones, $motivoBonificacion, $tipoDeduccion, $montoDeduccion, $tipoPago, $banco, $numeroCuenta, $beneficiosAdicionales, $usuario, $contraseña, $idEmpresa);
         echo $empleado->__toString();
-
-        if ($empleado->crearEmpleado() == false) {
+        
+        if($empleado->crearEmpleado() == false){
             return false;
         }
 
@@ -408,7 +408,7 @@ class crudEmpleadoC extends mainModel
         return $bonificaciones; // Devolver la cadena de bonificaciones sanitizada
     }
 
-    public static function sanitizarMotivoBonificaciones($motivoBonificacion)
+    public static function sanitizarMotivoBonificaciones($motivoBonificacion) //agregar a bd
     {
         if (!is_string($motivoBonificacion)) {
             throw new InvalidArgumentException("El motivo de la bonificación debe ser una cadena de texto");
@@ -443,7 +443,7 @@ class crudEmpleadoC extends mainModel
         return $tipoDeduccion;
     }
 
-    private static function sanitizarMontoDeduccion($monto)
+    private static function sanitizarMontoDeduccion($monto) //agregar a bd
     {
         if (!is_numeric($monto)) {
             throw new InvalidArgumentException("El monto de la deducción debe ser un número válido");
@@ -525,7 +525,7 @@ class crudEmpleadoC extends mainModel
         return $numeroCuenta;
     }
 
-    private static function sanitizarBeneficiosAdicionales($beneficios)
+    private static function sanitizarBeneficiosAdicionales($beneficios)//agregar a bd
     {
         $beneficiosValidos = [
             "ninguno",
@@ -586,7 +586,7 @@ class crudEmpleadoC extends mainModel
             throw new InvalidArgumentException("La contraseña debe tener al menos 8 caracteres, incluyendo letras y números");
         }
 
-        return parent::hashear_contraseña($contraseña);
+        return $contraseña;
     }
 
     public static function sanitizarIDEmpleado($id)
@@ -605,7 +605,7 @@ class crudEmpleadoC extends mainModel
         return $id;
     }
 
-    public static function sanitizarIDEmpresa($id)
+    public static function sanitizarIDEmpresa($id)//agregar a bd
     {
         if (!is_string($id)) {
             throw new InvalidArgumentException("El ID de la empresa debe ser una cadena de texto");

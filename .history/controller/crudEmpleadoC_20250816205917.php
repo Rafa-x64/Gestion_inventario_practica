@@ -605,7 +605,7 @@ class crudEmpleadoC extends mainModel
         return $id;
     }
 
-    public static function sanitizarIDEmpresa($id)
+    public static function sanitizarIDEmpresa($id) //agregar a 
     {
         if (!is_string($id)) {
             throw new InvalidArgumentException("El ID de la empresa debe ser una cadena de texto");

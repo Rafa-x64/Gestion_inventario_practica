@@ -93,57 +93,17 @@ class empleadoM extends mainModel
         $this->id_empresa = $id_empresa;
     }
 
-    public function crearEmpleado(): bool
-    {
-        try {
+    public function crearEmpleado(): bool {
+        try{
             $con = parent::conectar_base_datos();
-
-            $sql = "INSERT INTO empleados (
-            id_empleado, id_empresa, nombre, cedula, fecha_nacimiento, sexo, telefono, estado_civil,
-            correo, direccion, ROL, fecha_registro, tipo_contrato, hora_entrada, hora_salida,
-            estado, salario, bonificaciones, motivo_bonificacion, tipo_deduccion, monto_deduccion,
-            tipo_pago, banco, numero_cuenta, beneficios_adicionales, usuario, contraseña
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
-            $stmt = $con->prepare($sql);
-
-            $stmt->execute([
-                $this->id,           // ← ID generado previamente
-                $this->id_empresa,
-                $this->nombre,
-                $this->cedula,
-                $this->fecha_nacimiento,
-                $this->sexo,
-                $this->telefono,
-                $this->estado_civil,
-                $this->correo,
-                $this->direccion,
-                $this->rol,
-                $this->fecha_ingreso,
-                $this->tipo_contrato,
-                $this->hora_entrada,
-                $this->hora_salida,
-                $this->estado,
-                $this->salario,
-                $this->bonificaciones,
-                $this->motivo_bonificacion,
-                $this->tipo_deduccion,
-                $this->deduccion_monto,
-                $this->tipo_pago,
-                $this->banco,
-                $this->numero_cuenta,
-                $this->beneficios,
-                $this->usuario,
-                $this->contraseña // ← ¡Recuerda usar password_hash()!
-            ]);
-        } catch (PDOException $e) {
-            echo "Error al crear empleado: " . $e->getMessage();
+            $con->prepare("INSERT INTO empleado");
+        }catch(PDOException $e){
+            $e->getMessage();
             return false;
         }
 
         return true;
     }
-
     public function leerEmpleado() {}
     public function editarEmpleado() {}
     public function eliminarEmpleado() {}

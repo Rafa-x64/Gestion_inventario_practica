@@ -486,7 +486,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="container-fluid">
             <div class="row d-flex flex-row align-items-center justify-content-center">
                 <div class="col-10 bg-success d-flex flex row align-items-center justify-content-center">
-                    <p class="text-center text-white">Empleado registrado correctamente. Redirigiendo al dashboard</p>
+                    <p class="text-center text-white">Empleado registrad0 correctamente. Redirigiendo al dashboard</p>
                 </div>
             </div>
         </div>
@@ -497,11 +497,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="container-fluid">
             <div class="row d-flex flex-row align-items-center justify-content-center">
                 <div class="col-10 bg-danger d-flex flex row align-items-center justify-content-center">
-                    <p class="text-center text-white">Error al registrar el empleado. Redirigiendo al dashboard</p>
+                    <p class="text-center text-white">Error al registrar la empresa. Redirigiendo a inicio</p>
                 </div>
             </div>
         </div>
-        <meta http-equiv="refresh" content="6;url=index.php?page=dashboard-admin">
+        <meta http-equiv="refresh" content="4;url=index.php?page=inicio">
 <?php
     }
 }
