@@ -104,6 +104,7 @@ class mainModel
     //----------------encriptar un dato------------------------
     protected static function encriptar_dato($dato)
     {
+
         return openssl_encrypt($dato, METHOD, CLAVE, 0, IV);
     }
 

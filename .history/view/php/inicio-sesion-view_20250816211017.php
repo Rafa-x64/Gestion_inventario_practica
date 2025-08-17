@@ -81,17 +81,13 @@ include("./controller/inicioSesionC.php");
     </div>
     <!--fin del container-->
 </div>
+
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $datos_usuario = inicioSesionC::obtener_formulario($_POST);
-    $rol = inicioSesionC::login_usuario(
-        $datos_usuario["nombre_legal"],
-        $datos_usuario["usuario"],
-        $datos_usuario["contraseña"]
-    );
+    if (inicioSesionC::login_usuario($datos_usuario["nombre_legal"], $datos_usuario["usuario"], $datos_usuario["contraseña"]) == false) {
 
-    if ($rol === false) {
 ?>
         <div class="container-fluid">
             <div class="row d-flex flex-row align-items-center justify-content-center">
@@ -102,24 +98,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <meta http-equiv="refresh" content="4;url=index.php?page=inicio-sesion">
     <?php
+
     } else {
-        $dashboard = match (strtolower(trim($rol))) {
-            //este codigo se tiene que acomodar para hacer el dashboard del empleado administrador y del vendedor
-            "super administrador" => "dashboard-admin",
-            "empleado administrador" => "dashboard-admin",
-            "empleado vendedor" => "dashboard-vendedor",
-            default => "dashboard-generico"
-        };
     ?>
         <div class="container-fluid">
             <div class="row d-flex flex-row align-items-center justify-content-center">
                 <div class="col-10 bg-success d-flex flex row align-items-center justify-content-center">
-                    <p class="text-center text-white">Éxito, redirigiendo al dashboard de <?= $rol ?></p>
+                    <p class="text-center text-white">Exito, redirigiendo al dashboard de admin</p>
                 </div>
             </div>
         </div>
-        <meta http-equiv="refresh" content="4;url=index.php?page=<?= $dashboard ?>">
+        <meta http-equiv="refresh" content="4;url=index.php?page=dashboard-admin">
 <?php
     }
+    //enviar el metodo post al formulario de inicio de sesion del controlador
 }
+
 ?>

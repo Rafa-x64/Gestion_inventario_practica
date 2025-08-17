@@ -104,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php
     } else {
         $dashboard = match (strtolower(trim($rol))) {
-            //este codigo se tiene que acomodar para hacer el dashboard del empleado administrador y del vendedor
+            //este codigo se tiene que acomodar para hacer el dash
             "super administrador" => "dashboard-admin",
             "empleado administrador" => "dashboard-admin",
             "empleado vendedor" => "dashboard-vendedor",

@@ -1,6 +1,6 @@
 la aplicacion ya registra empleados vendedores y super administradores, lo proximo sera:
 
-1._crear el dashboard del empleado administrador y del empleado vendedor. junto a esto acomodar los headers del super admin, empleado administrador y empleado vendedor (acomodar la linea del la vista para inicio de sesion en la parte final en donde se asigna un dashboard dependiendo del rol).
+1._crear el dashboard del empleado administrador y del empleado vendedor. junto a esto acomodar los headers del super admin, empleado administrador y empleado vendedor (acomodar la linea del la vista para inicio de sesion en la parte final en donde se asigna un das).
 
 2._averiguar por que el empleado_motivo_bonificacion envia null a la bbase de datos
 

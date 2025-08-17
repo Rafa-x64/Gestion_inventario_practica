@@ -1,0 +1,9 @@
+la aplicacion ya registra empleados vendedores y super administradores, lo proximo sera
+
+1._crear el dashboard del empleado administrador y del empleado vendedor. junto a esto acomodar los headers del super admin, empleado administrador y empleado vendedor.
+
+2._averiguar por que el empleado_
+
+3._
+
+4._

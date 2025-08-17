@@ -1,0 +1,9 @@
+la aplicacion ya registra empleados vendedores y super administradores, lo proximo sera
+
+1._crear el dashboard del empleado administrador y del empleado vendedor. junto a esto acomodar los headers del super admin, empleado administrador y empleado vendedor.
+
+2._averiguar por que el empleado_motivo_bonificacion envia null a la bbase de datos
+
+3._hacer merge al main cuando todo funcione bien
+
+4._crear una carpeta con traits en los que en vez de tirar exepciones y retornos falsos pueda hacer un trozo de codigo con bootstrap y una propiedad ya sea warning succes o info, ademas de un mensaje
