@@ -1,0 +1,9 @@
+1._crear una carpeta con traits en los que en vez de tirar exepciones y retornos falsos pueda hacer un trozo de codigo con bootstrap y una propiedad ya sea warning succes o info, ademas de un mensaje que se le quiera mostrar al usuario (retornar numeros enteros en las funciones en vez de bool o)
+
+2._hacer validaciones de formulario con bootstrap usando need-validate y tooltip, quitar los puntos feos que aparecen en los formularios (en youtube hay un tutorial)
+
+3._editar los headers del empleado administrador y empleado vendedor para que solo puedar realizar ciertas acciones en el sistema
+
+._
+
+._hacer merge al main cuando todo funcione bien

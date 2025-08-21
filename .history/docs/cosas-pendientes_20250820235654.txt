@@ -1,0 +1,5 @@
+1._crear una carpeta con traits en los que en vez de tirar exepciones y retornos falsos pueda hacer un trozo de codigo con bootstrap y una propiedad ya sea warning succes o info, ademas de un mensaje que se le quiera mostrar al usuario
+
+2._editar los headers del empl
+
+._hacer merge al main cuando todo funcione bien

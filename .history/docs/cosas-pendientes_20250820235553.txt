@@ -1,0 +1,3 @@
+
+
+4._crear una carpeta con traits en los que en vez de tirar exepciones y retornos falsos pueda hacer un trozo de codigo con bootstrap y una propiedad ya sea warning succes o info, ademas de un mensaje que se le quiera mostrar al usuario
